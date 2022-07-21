@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Frontend Mentor | Project tracking intro component</title>
+
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <div class="brand-logo">
+            <img src="images/logo.svg" alt="logo" />
+          </div>
+          <span id="toggle"></span>
+          <ul class="menu">
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <div class="dot">.</div>
+            <li><a class="login" href="#">Login</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="main">
+        <div class="img-container">
+          <div class="img"></div>
+        </div>
+
+        <div class="content">
+          <p h3 class="pre-heading"><span>New</span> Monograph Dashboard</p>
+          <h1 class="heading">Powerful insights into your team</h1>
+          <p class="sub-heading">
+            Project planning and time tracking <br />
+            for agile teams
+          </p>
+          <div class="btn-container">
+            <button class="btn">Schedule a demo</button>
+            <p>to see a live preview</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      const hamburger = document.querySelector("#toggle");
+      const menu = document.querySelector(".menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+
+        menu.classList.toggle("show");
+      });
+      window.addEventListener("resize", function () {
+        if (window.innerWidth < 500) menu.classList.remove("show");
+      });
+    </script>
+  </body>
+</html>
